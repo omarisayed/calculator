@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Lobster&family=Roboto&family=Source+Serif+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #bbb;
+}
+
+.container{
+    max-width: 350px;  
+    width: 100%;
+    border-radius: 20px;
+    background-color: #000; 
+    box-shadow: 4px 4px 4px #848884;
+}
+
+.container-child{
+    margin: 5px;
+}
+
+.display-div{
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    min-height: 100px;
+    margin-right: 15px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #000;
+}
+
+.button-div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 0px 15px 30px 15px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #000;
+    
+}
+.btn, .btn-ac, .btn-del, .btn-equal{
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Roboto';
+    text-align: center;
+    cursor: pointer;
+    background-color: #71797E;
+
+}
+
+.btn:hover{
+    background-color: #C0C0C0;
+}
+
+.btn-ac, .btn-0{
+    grid-column: span 2;
+    border-radius: 40px;
+}
+
+.btn-ac{
+    color: #fff;
+    background-color: #aaa;
+}
+
+.btn-ac:hover{
+    background-color: #E5E4E2;
+}
+
+.btn-del, .btn-divide, .btn-mult, .btn-minus, .btn-add, .btn-equal{
+    background-color: #FF9500;
+}
+
+.btn-del:hover, .btn-divide:hover, .btn-mult:hover, .btn-minus:hover, .btn-add:hover, .btn-equal:hover{
+    background-color: #FFD580;
+}
