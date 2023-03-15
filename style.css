@@ -23,11 +23,7 @@ body{
     box-shadow: 4px 4px 4px #848884;
 }
 
-.container-child{
-    margin: 5px;
-}
-
-.display-div{
+.screen-div{
     color: #fff;
     font-family: 'Roboto';
     font-size: 50px;
@@ -44,6 +40,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
+    margin: 5px;
     padding: 0px 15px 30px 15px;
     border-radius: 0px 0px 20px 20px;
     background-color: #000;
