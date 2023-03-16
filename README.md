@@ -1,1 +1,1 @@
-Calculator project from TOP
+TOP's calculator project
