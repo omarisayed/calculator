@@ -46,7 +46,7 @@ body{
     background-color: #000;
     
 }
-.btn, .btn-ac, .btn-c, .btn-equal{
+.btn, .btn-ac, .btn-equal{
     height: 70px;
     border-radius: 50%;
     border: none;
@@ -66,8 +66,15 @@ body{
 }
 
 .btn-ac, .btn-0{
-    grid-column: span 2;
     border-radius: 40px;
+}
+
+.btn-ac{
+    grid-column: span 3;
+}
+
+.btn-0{
+    grid-column: span 2;
 }
 
 .btn-ac{
@@ -79,10 +86,10 @@ body{
     background-color: #E5E4E2;
 }
 
-.btn-c, .btn-dvd, .btn-mult, .btn-minus, .btn-add, .btn-equal{
+.btn-dvd, .btn-mult, .btn-minus, .btn-add, .btn-equal{
     background-color: #FF9500;
 }
 
-.btn-c:hover, .btn-dvd:hover, .btn-mult:hover, .btn-minus:hover, .btn-add:hover, .btn-equal:hover{
+.btn-dvd:hover, .btn-mult:hover, .btn-minus:hover, .btn-add:hover, .btn-equal:hover{
     background-color: #FFD580;
 }
