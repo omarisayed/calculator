@@ -23,7 +23,7 @@ body{
     box-shadow: 4px 4px 4px #848884;
 }
 
-.screen-div{
+.screen{
     color: #fff;
     font-family: 'Roboto';
     font-size: 50px;
@@ -36,7 +36,7 @@ body{
     background-color: #000;
 }
 
-.button-div{
+.buttons{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
@@ -46,7 +46,7 @@ body{
     background-color: #000;
     
 }
-.btn, .btn-ac, .btn-del, .btn-equal{
+.btn, .btn-ac, .btn-c, .btn-equal{
     height: 70px;
     border-radius: 50%;
     border: none;
@@ -79,10 +79,10 @@ body{
     background-color: #E5E4E2;
 }
 
-.btn-del, .btn-divide, .btn-mult, .btn-minus, .btn-add, .btn-equal{
+.btn-c, .btn-dvd, .btn-mult, .btn-minus, .btn-add, .btn-equal{
     background-color: #FF9500;
 }
 
-.btn-del:hover, .btn-divide:hover, .btn-mult:hover, .btn-minus:hover, .btn-add:hover, .btn-equal:hover{
+.btn-c:hover, .btn-dvd:hover, .btn-mult:hover, .btn-minus:hover, .btn-add:hover, .btn-equal:hover{
     background-color: #FFD580;
 }
