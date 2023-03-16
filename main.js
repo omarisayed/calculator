@@ -1,59 +1,22 @@
-let screen = document.querySelector('.screen-div')
-const acButton = document.querySelector('.btn-ac')
-const backspaceButton = document.querySelector('.btn-del')
-const equalButton = document.querySelector('.btn-equal')
-const buttons = Array.from(document.querySelectorAll('.btn'))
+let screen = document.querySelector('.screen')
+let num1 = "";  //operand 1
+let operator = "";  
+let num2 = "";    //operand 2
+let result = "";
 
-let numArray = [];
-let operator = null;
-let lastChar = screen.textContent.slice(-1); // last character of the array
+function handleClick(button){
 
-
-buttons.forEach(function(button){
-    button.addEventListener('click',function(e){ 
-        let value = e.target.dataset.val // check which button has been clicked on then display its value on screen
-        screen.textContent += value
-
-        if (!isNaN(parseFloat(value))){ // if the clicked button is a number, add it to the array
-            numArray.push(value)
-        }else if (value === '+' || value === '-' || value === '&#215;' || value === '&#247;'){
-            operator = value
+    if (button >= '0' && button <= '9'){ // If the button is numerical, and operator is an empty value, keep concatenating:
+        if (operator = ""){
+            num1 += button   // the numerical string values will concatenate, so we can have double/triple digits.
+        }else {
+            num2 += button  //else if operator is not empty, we move to num2(operand 2)
         }
 
-    })
-})
-
-
-acButton.addEventListener('click', function(e){
-    screen.textContent = screen.textContent = ''
-    numArray = []
-    operator = null
-})
-
-
-backspaceButton.addEventListener('click', function(e){
-    if (!isNaN(parseFloat(lastChar))){ // if the last entered character is a number, remove it from the array
-        numArray.pop()
-    }else if (lastChar === '+' || lastChar === '-' || lastChar === '&#215;' || lastChar === '&#247;'){ 
-        operator = null;
+    }else if (button === '+' || button === '-' || button === 'x' || button === '÷'){ // if the button is an operator, assign the clicked operator button to the operator variable:
+        operator = button
     }
+    
+    screen.textContent = num1 + operator + num2
+}
 
-    screen.textContent = screen.textContent.slice(0,-1);  // also remove text from screen
-})
-
-
-equalButton.addEventListener('click', function(e){
-    if (screen.textContent === ''){  // if the screen if empty and you press = sign dont display anything.
-        screen.textContent = ''
-    }else{
-       
-    }
-})
-
-
-
-
-
-//------------------------------------------------------------
-//NaN is short for "Not-a-Number". The isNaN() method returns true if a value is NaN. The isNaN() method converts the value to a number before testing it.
-// parseInt is for converting a non integer number to an int and parseFloat is for converting a non float (with out a decimal) to a float (with a decimal).
