@@ -21,6 +21,7 @@ body{
     border-radius: 20px;
     background-color: #000; 
     box-shadow: 4px 4px 4px #848884;
+    margin-bottom: 20px;
 }
 
 .screen{
@@ -85,4 +86,11 @@ body{
 
 .btn-c:hover, .btn-dvd:hover, .btn-mult:hover, .btn-minus:hover, .btn-add:hover, .btn-equal:hover{
     background-color: #FFD580;
+}
+
+.footer{
+    font: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
 }
