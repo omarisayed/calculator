@@ -8,10 +8,15 @@ function handleClick(button){
 
     if (button >= '0' && button <= '9'){ // If the button is numerical, and operator is an empty value, keep concatenating:
         if (operator === ""){
-            num1 += button   // the numerical string values will concatenate, so we can have double/triple digits.
-        }else {
-            num2 += button  //else if operator is not empty, we move to num2(operand 2)
+            if (!num1.includes(".") || num1.split(".")[1].length < 1){ // making sure if number has (.), numbers after decimal place do not exceed one. 
+                num1 += button   //concat numbers (of type string) before decimal point.
         }
+    
+        }else {
+            if (!num2.includes(".") || num2.split(".")[1].length < 1){
+                num2 += button
+        }
+    }
     
     }else if (button === '.' && !((operator === "" && num1.includes(".")) || (operator !== "" && num2.includes(".")))){
         // Add decimal point only if the number being entered doesnt already have one
@@ -39,7 +44,7 @@ function handleClick(button){
         if (Math.round(result) === result){
             result = result.toFixed(0); //display as integer
         }else{
-            result = result.toFixed(2); // display with two decimal places
+            result = result.toFixed(1); // display with one decimal places
         }
         // Reset variables for the next calculation
         num1 = result.toString()
