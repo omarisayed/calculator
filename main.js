@@ -52,7 +52,17 @@ function handleClick(button){
         operator = "";
         result = ""; 
 
-    } // If the button clicked is AC:
+    } // If the button clicked is C:
+     else if (button === 'C'){
+        if (num2 !== ""){
+            num2 = num2.slice(0, -1);
+        }else if (operator !== ""){
+            operator = ""
+        }else if (num1 !== ""){
+            num1 = num1.slice(0, -1);
+        }
+
+    }// If the button clicked is AC:
     else if (button === 'AC'){
         num1 = "";
         num2 = "";
